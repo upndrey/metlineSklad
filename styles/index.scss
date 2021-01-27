@@ -200,6 +200,17 @@ body {
     background-repeat: no-repeat;
     width: 182px;
     height: 150px;
+    & span {
+      display: block;
+      width: 175px;
+      font-size: 16px;
+      text-align: center;
+      position: relative;
+      top: 126px;
+    }
+    @include tablets {
+      margin-bottom: 20px;
+    }
   }
 
   .menu {
@@ -353,7 +364,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 140px;
+  margin-bottom: 50px;
 
   &:before {
     @include icon("../images/firstScreen/icons/vertical_line.png", 2px, 180px, true, absolute);
@@ -404,20 +415,20 @@ body {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      font-weight: bold;
     }
 
     .btn-send {
       width: 300px;
       height: 67px;
-      border: 3px solid #006DFF;
-      box-shadow: inset 1px 0 5px #4B87D8;
-      border-radius: 20px;
+      border: 2px solid #1F53FF;
+      box-sizing: border-box;
+      border-radius: 25px;
       margin-right: 25px;
-      filter: drop-shadow(7px 7px 25px #4B87D8);
       transition: .5s ease-in-out;
 
       &:hover {
-        background: #006DFF;
+        background: #1F53FF;
       }
 
       @include tablets {
@@ -429,13 +440,13 @@ body {
     .btn-catalog {
       width: 242px;
       height: 61px;
-      border: 2px solid rgba(191, 65, 69, 0.74);
-      box-shadow: inset 1px 0 5px #BF4145;
-      border-radius: 13px;
+      border: 2px solid #2AD99A;
+      box-sizing: border-box;
+      border-radius: 25px;
       transition: .5s ease-in-out;
 
       &:hover {
-        background: #BF4145;
+        background: #2AD99A;
       }
       @include tablets {
         margin-right: 0;
@@ -565,18 +576,22 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 35px;
+  width: 600px;
+  margin-top: 50px;
 
   .block {
     position: relative;
     display: flex;
     flex-direction: column;
+    font-size: 14px;
 
     &__nums {
       position: relative;
-      font-size: 24px;
       margin-bottom: 10px;
+      font-size: 14px;
       span {
-        font-size: 48px;
+        font-size: 24px;
+        font-weight: bold;
       }
     }
 
@@ -585,7 +600,7 @@ body {
       margin-left: 25px;
       &:before{
         transition: .3s ease-in-out;
-        @include icon("../images/firstScreen/icons/triangle.png", 20px, 25px, true, absolute);
+        @include icon("../images/firstScreen/icons/triangle.png", 8px, 13px, true, absolute);
         top: -1px;
         left: -25px;
       }
@@ -595,25 +610,29 @@ body {
           left: -23px;
         }
       }
-      @include tablets{
+      @include phones{
         display: none;
       }
     }
-    &:nth-child(odd):before {
-      @include icon("../images/firstScreen/icons/arr_right.png", 22px, 40px, true, absolute);
-      top: 5px;
-      left: -35px;
-    }
-    &:nth-child(even):before {
-      @include icon("../images/firstScreen/icons/arr_circle.png", 31px, 31px, true, absolute);
-      top: 10px;
-      left: -35px;
+    &:before {
+      @include icon("../images/firstScreen/icons/arr_right.png", 10px, 35px, true, absolute);
+      top: -3px;
+      left: -20px;
     }
     @include tablets{
       margin-bottom: 10px;
     }
   }
-  @include tablets{
+  @include laptop {
+    margin: 30px auto;
+  }
+
+  @include tablets {
+    width: 500px;
+  }
+
+  @include phones{
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -624,7 +643,7 @@ body {
 .videoCtrl {
   position: absolute;
   right: 100px;
-  bottom: 50px;
+  bottom: 25px;
   width: $desktopWidth;
   display: flex;
   align-items: center;
