@@ -676,6 +676,8 @@ body {
   color: #fff;
   font-size: 16px;
   flex-direction: column;
+  min-height: 900px;
+  justify-content: space-between;
   &__wrapper {
     overflow-x: hidden;
     position: relative;
@@ -701,113 +703,60 @@ body {
   &__block {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+    #metaloprokat {
+      @include icon("../images/catalog/metaloprokat.png", 288px, 207px, false);
+      background-repeat: no-repeat;
+      transition: .5s ease-in-out;
+      &:hover {
+        width: 398px;
+        height: 286px;
+      }
+    }
+    #nerzhaveyka {
+      @include icon("../images/catalog/nerzhaveyka.png", 288px, 207px, false);
+      background-repeat: no-repeat;
+      transition: .5s ease-in-out;
+      &:hover {
+        width: 398px;
+        height: 286px;
+      }
+    }
+    #cventinye {
+      @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+      background-repeat: no-repeat;
+      transition: .5s ease-in-out;
+      &:hover {
+        width: 398px;
+        height: 286px;
+      }
+    }
     &>* {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 172px;
-      text-align: center;
-      margin: 0 7px;
       &>p {
-        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.7);
+        transition: .5s ease-in-out;
+        &:hover {
+          background: transparent;
+        }
+      }
+      @include tablets {
         margin-bottom: 25px;
       }
-      /* CATALOG_LIST */
-      .opori_tryboprovoda {
-        @include icon("../images/catalog/opori_tryboprovoda.png", 116px, 112px, false);
-      }
-      .zakladnie_detali {
-        @include icon("../images/catalog/zakladnie_detali.png", 116px, 112px, false);
-      }
-      .ankernie_tyagi {
-        @include icon("../images/catalog/ankernie_tyagi.png", 116px, 112px, false);
-      }
-      .traversi {
-        @include icon("../images/catalog/traversi.png", 116px, 112px, false);
-      }
-      .salniki {
-        @include icon("../images/catalog/salniki.png", 116px, 112px, false);
-      }
-      .lestnici {
-        @include icon("../images/catalog/lestnici.png", 116px, 112px, false);
-      }
-      .prozhektornie_machti {
-        @include icon("../images/catalog/prozhektornie_machti.png", 116px, 112px, false);
-      }
-      .emkostnoe_oborydovanie {
-        @include icon("../images/catalog/emkostnoe_oborydovanie.png", 116px, 112px, false);
-      }
-      .tbo {
-        @include icon("../images/catalog/tbo.png", 116px, 112px, false);
-      }
-      .bolti {
-        @include icon("../images/catalog/bolti.png", 116px, 112px, false);
-      }
-      .ory {
-        @include icon("../images/catalog/ory.png", 116px, 112px, false);
-      }
-      .metallicheskie_formi {
-        @include icon("../images/catalog/metallicheskie_formi.png", 116px, 112px, false);
-      }
-      .osvetitelnie_machti {
-        @include icon("../images/catalog/osvetitelnie_machti.png", 116px, 112px, false);
-      }
-      .vl_lep {
-        @include icon("../images/catalog/vl_lep.png", 116px, 112px, false);
-      }
-      .nestandart {
-        @include icon("../images/catalog/nestandart.png", 116px, 112px, false);
-      }
-      .stroitelnie {
-        @include icon("../images/catalog/stroitelnie.png", 116px, 112px, false);
-      }
-      .tehnologicheskie {
-        @include icon("../images/catalog/tehnologicheskie.png", 116px, 112px, false);
-      }
-      .armatyra {
-        @include icon("../images/catalog/armatyra.png", 116px, 112px, false);
-      }
-      .registri {
-        @include icon("../images/catalog/registri.png", 116px, 112px, false);
-      }
-      .pryzhini {
-        @include icon("../images/catalog/pryzhini.png", 116px, 112px, false);
-      }
-      .compensatori {
-        @include icon("../images/catalog/compensatori.png", 116px, 112px, false);
-      }
-      &>div {
-        border-radius: 18px;
-        margin-bottom: 15px;
-        background-position: 0 -2px;
-        box-shadow: 5px 5px 2px 0 #171831;
-        transition: .5s ease-in-out;
-        position: relative;
-        left: 0;
-        top: 0;
-      }
-
-      &:hover {
-        &>div {
-          position: relative;
-          left: 5px;
-          top: 5px;
-          box-shadow: 0 0 5px 0 #171831;
-        }
-
-        &>p {
-          text-decoration: underline;
-        }
-      }
-      /* /CATALOG_LIST */
     }
 
-    @include phones {
+    @include tablets {
       flex-direction: column;
       width: 100%;
-      height: 600px;
-      overflow-x: scroll;
     }
   }
 

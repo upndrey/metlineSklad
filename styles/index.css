@@ -633,7 +633,9 @@ body {
   max-width: 1120px;
   color: #fff;
   font-size: 16px;
-  flex-direction: column; }
+  flex-direction: column;
+  min-height: 900px;
+  justify-content: space-between; }
   .catalog__wrapper {
     overflow-x: hidden;
     position: relative;
@@ -654,209 +656,67 @@ body {
   .catalog__block {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; }
-    .catalog__block > * {
+    justify-content: space-around;
+    align-items: center; }
+    .catalog__block #metaloprokat {
+      position: relative;
+      display: block;
+      background-image: url("../images/catalog/metaloprokat.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 288px;
+      height: 207px;
+      background-repeat: no-repeat;
+      transition: .5s ease-in-out; }
+      .catalog__block #metaloprokat:hover {
+        width: 398px;
+        height: 286px; }
+    .catalog__block #nerzhaveyka {
+      position: relative;
+      display: block;
+      background-image: url("../images/catalog/nerzhaveyka.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 288px;
+      height: 207px;
+      background-repeat: no-repeat;
+      transition: .5s ease-in-out; }
+      .catalog__block #nerzhaveyka:hover {
+        width: 398px;
+        height: 286px; }
+    .catalog__block #cventinye {
+      position: relative;
+      display: block;
+      background-image: url("../images/catalog/cventinye.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 288px;
+      height: 207px;
+      background-repeat: no-repeat;
+      transition: .5s ease-in-out; }
+      .catalog__block #cventinye:hover {
+        width: 398px;
+        height: 286px; }
+    .catalog__block > * > p {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 172px;
+      justify-content: center;
       text-align: center;
-      margin: 0 7px;
-      /* CATALOG_LIST */
-      /* /CATALOG_LIST */ }
-      .catalog__block > * > p {
-        line-height: 20px;
-        margin-bottom: 25px; }
-      .catalog__block > * .opori_tryboprovoda {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/opori_tryboprovoda.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .zakladnie_detali {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/zakladnie_detali.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .ankernie_tyagi {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/ankernie_tyagi.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .traversi {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/traversi.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .salniki {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/salniki.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .lestnici {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/lestnici.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .prozhektornie_machti {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/prozhektornie_machti.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .emkostnoe_oborydovanie {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/emkostnoe_oborydovanie.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .tbo {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/tbo.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .bolti {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/bolti.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .ory {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/ory.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .metallicheskie_formi {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/metallicheskie_formi.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .osvetitelnie_machti {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/osvetitelnie_machti.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .vl_lep {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/vl_lep.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .nestandart {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/nestandart.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .stroitelnie {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/stroitelnie.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .tehnologicheskie {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/tehnologicheskie.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .armatyra {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/armatyra.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .registri {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/registri.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .pryzhini {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/pryzhini.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * .compensatori {
-        position: relative;
-        display: block;
-        background-image: url("../images/catalog/compensatori.png");
-        -webkit-background-size: cover;
-        background-size: cover;
-        width: 116px;
-        height: 112px; }
-      .catalog__block > * > div {
-        border-radius: 18px;
-        margin-bottom: 15px;
-        background-position: 0 -2px;
-        box-shadow: 5px 5px 2px 0 #171831;
-        transition: .5s ease-in-out;
-        position: relative;
-        left: 0;
-        top: 0; }
-      .catalog__block > *:hover > div {
-        position: relative;
-        left: 5px;
-        top: 5px;
-        box-shadow: 0 0 5px 0 #171831; }
-      .catalog__block > *:hover > p {
-        text-decoration: underline; }
-    @media screen and (max-width: 480px) {
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      transition: .5s ease-in-out; }
+      .catalog__block > * > p:hover {
+        background: transparent; }
+    @media screen and (max-width: 768px) {
+      .catalog__block > * {
+        margin-bottom: 25px; } }
+    @media screen and (max-width: 768px) {
       .catalog__block {
         flex-direction: column;
-        width: 100%;
-        height: 600px;
-        overflow-x: scroll; } }
+        width: 100%; } }
   .catalog__links {
     display: flex;
     justify-content: center;
