@@ -989,6 +989,70 @@ body {
 }
 /* /CATALOG */
 
+/* Metall */
+.cvetnyeMetally {
+
+  .fp-tableCell {
+    height: 600px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  a {
+
+  }
+
+  .fp-controlArrow.fp-prev {
+    width: 62px;
+    height: 62px;
+    left: 0;
+  }
+
+  .fp-controlArrow.fp-next {
+    width: 62px;
+    height: 62px;
+    right: 0;
+  }
+
+  #aluminiym {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #bronze {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #wolfram {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #latyn {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #magniy {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #med {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #nikel {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #nihrom {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #olovo {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #svinec {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #titan {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+  #cink {
+    @include icon("../images/catalog/cventinye.png", 288px, 207px, false);
+  }
+}
+/* /Metall */
 /* SERVICES */
 .hiddenBlocks__bg {
   z-index: 10;

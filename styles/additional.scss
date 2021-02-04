@@ -1,0 +1,324 @@
+@import "mixins";
+
+/* GLOBAL */
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  min-width: 320px;
+}
+
+.notImplemented {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.displaynone {
+  display: none;
+}
+
+
+.container {
+  max-width: $desktopWidth - 100px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  font-weight: 300;
+
+  @include desktop{
+    max-width: $laptopWidthBound;
+  }
+
+  @include laptop{
+    max-width: $tabletsWidthBound;
+  }
+
+  @include tablets{
+    max-width: $phonesWidthBound;
+  }
+
+  @include phones{
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.displayflex {
+  display: flex;
+}
+
+.titleBlock {
+  align-self: center;
+  width: $desktopWidth;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+  h2 {
+    color: #E9F2FF;
+    position: relative;
+    font-size: 36px;
+    &:before {
+      @include icon("../images/horizontal_line.png", 200px, 2px);
+      top: 45px;
+    }
+
+    @include laptop{
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+
+    width: 638px;
+    &:before {
+      @include icon("../images/small_vertical_line.png", 2px, 100px, true, absolute);
+      left: -10px;
+    }
+    @include tablets{
+      max-width: 100%;
+    }
+  }
+
+  @include desktop{
+    max-width: $laptopWidthBound;
+  }
+
+  @include laptop{
+    max-width: $tabletsWidthBound;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include tablets{
+    max-width: $phonesWidthBound;
+  }
+
+  @include phones{
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+/* /GLOBAL */
+/* Metall */
+
+/* CATALOG */
+.catalog {
+  max-width: 1120px;
+  height: 100vh;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+    background: #161C28;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 283px;
+      height: 1074px;
+      right: -300px;
+      top: 0;
+
+      background: #121E79;
+      opacity: 0.6;
+      filter: blur(250px);
+      @include phones {
+        height: auto;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .titleBlock {
+    margin-bottom: 100px;
+  }
+
+  &__links {
+     display: flex;
+     justify-content: center;
+     margin-bottom: 20px;
+     color: #006DFF;
+     &>* {
+       margin: 0 30px;
+       position: relative;
+       display: flex;
+       align-items: center;
+       &:hover {
+         text-decoration: underline;
+       }
+       @include tablets {
+         margin-bottom: 10px;
+       }
+     }
+
+     .request:before {
+       @include icon("../images/catalog/icons/request.png", 20px, 20px, true, absolute);
+       left: -30px;
+     }
+     .search:before {
+       @include icon("../images/catalog/icons/search.png", 18px, 18px, true, absolute);
+       left: -30px;
+     }
+     .tech:before {
+       @include icon("../images/catalog/icons/tech.png", 17px, 16px, true, absolute);
+       left: -30px;
+     }
+     .delivery:before {
+       @include icon("../images/catalog/icons/delivery.png", 21px, 16px, true, absolute);
+       left: -30px;
+     }
+     .contacts:before {
+       @include icon("../images/catalog/icons/contacts.png", 13px, 19px, true, absolute);
+       left: -25px;
+     }
+     @include tablets {
+       flex-wrap: wrap;
+     }
+   }
+  @include laptop {
+    height: auto;
+  }
+}
+.cvetnyeMetally {
+  .section {
+    width: 900px;
+    height: 400px !important;
+    margin: auto;
+    @include laptop {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 600px;
+      height: auto !important;
+      margin: auto;
+    }
+    @include phones {
+      width: 100%;
+    }
+  }
+
+  .fp-tableCell {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 900px;
+    height: 400px !important;
+    margin: auto;
+  }
+
+  @include laptop {
+    .slide {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 600px;
+      height: auto;
+      margin: auto;
+    }
+  }
+  @include phones {
+    .slide {
+      width: 100%;
+    }
+  }
+
+  a {
+    border: 1px solid #198AF2;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: 25px 50px;
+    p {
+      text-align: center;
+      position: relative;
+      bottom: 25px;
+    }
+  }
+
+  .fp-controlArrow.fp-next,
+   .fp-controlArrow.fp-prev {
+     border: none;
+     width: 62px;
+     height: 62px;
+     bottom: 50px !important;
+   }
+  .fp-controlArrow.fp-prev {
+    background: url("../images/arr_left.png");
+    left: -75px;
+  }
+  .fp-controlArrow.fp-next {
+    background: url("../images/arr_right.png");
+    right: -75px;
+  }
+  #aluminiym {
+    @include icon("../images/catalog/cvetniye/aluminiym.jpg", 200px, 135px, false);
+  }
+  #bronze {
+    @include icon("../images/catalog/cvetniye/bronze.jpg", 200px, 135px, false);
+  }
+  #wolfram {
+    @include icon("../images/catalog/cvetniye/wolfram.jpg", 200px, 135px, false);
+  }
+  #latyn {
+    @include icon("../images/catalog/cvetniye/latyn.jpg", 200px, 135px, false);
+  }
+  #magniy {
+    @include icon("../images/catalog/cvetniye/magniy.jpg", 200px, 135px, false);
+  }
+  #med {
+    @include icon("../images/catalog/cvetniye/med.jpg", 200px, 135px, false);
+  }
+  #nikel {
+    @include icon("../images/catalog/cvetniye/nikel.jpg", 200px, 135px, false);
+  }
+  #nihrom {
+    @include icon("../images/catalog/cvetniye/nihrom.jpg", 200px, 135px, false);
+  }
+  #olovo {
+    @include icon("../images/catalog/cvetniye/olovo.jpg", 200px, 135px, false);
+  }
+  #svinec {
+    @include icon("../images/catalog/cvetniye/svinec.jpg", 200px, 135px, false);
+  }
+  #titan {
+    @include icon("../images/catalog/cvetniye/titan.jpg", 200px, 135px, false);
+  }
+  #cink {
+    @include icon("../images/catalog/cvetniye/cink.jpg", 200px, 135px, false);
+  }
+  #cirkoniy {
+    @include icon("../images/catalog/cvetniye/cirkoniy.jpg", 200px, 135px, false);
+  }
+}
+/* /Metall */

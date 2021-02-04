@@ -1066,6 +1066,118 @@ body {
   margin: 0; }
 
 /* /CATALOG */
+/* Metall */
+.cvetnyeMetally .fp-tableCell {
+  height: 600px !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+.cvetnyeMetally .fp-controlArrow.fp-prev {
+  width: 62px;
+  height: 62px;
+  left: 0; }
+.cvetnyeMetally .fp-controlArrow.fp-next {
+  width: 62px;
+  height: 62px;
+  right: 0; }
+.cvetnyeMetally #aluminiym {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #bronze {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #wolfram {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #latyn {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #magniy {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #med {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #nikel {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #nihrom {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #olovo {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #svinec {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #titan {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+.cvetnyeMetally #cink {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cventinye.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 288px;
+  height: 207px; }
+
+/* /Metall */
 /* SERVICES */
 .hiddenBlocks__bg {
   z-index: 10;

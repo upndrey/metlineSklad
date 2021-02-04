@@ -283,13 +283,14 @@
 
         calculator_dop_info_show_hide(0);
 
-        $.post("/calculator", {
+        $.post("http://23met.ru/calculator", {
                 ajax: 'load_sizes_and_calc_html',
                 naimenovanie: naimenovanie,
                 size: size,
                 load_sizes: ($("#select-size").attr('data-naimenovanie') === naimenovanie) ? 0 : 1
             },
             function (data) {
+                console.log(data);
                 calculator_dop_info_show_hide(1);
                 calculator_data_to_html(naimenovanie, data);
             });
