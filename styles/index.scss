@@ -278,31 +278,31 @@ body {
   }
 
   .menu {
-    display: flex;
-    align-items: center;
-    &>a {
-      box-sizing: border-box;
-      padding: 5px;
-      margin: 15px;
-      font-size: 16px;
-      &:hover {
-        color: #2180FF;
-        border-bottom: 2px solid #2180FF;
-      }
-      @include laptop {
-        margin: 5px;
-      }
-    }
+     display: flex;
+     align-items: center;
+     &>a {
+       box-sizing: border-box;
+       padding: 5px;
+       margin: 15px;
+       font-size: 16px;
+       &:hover {
+         color: #2180FF;
+         border-bottom: 2px solid #2180FF;
+       }
+       @include laptop {
+         margin: 5px;
+       }
+     }
 
-    .active {
-      color: #2180FF;
-      border-bottom: 2px solid #2180FF;
-    }
-    @include laptop {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  }
+     .active {
+       color: #2180FF;
+       border-bottom: 2px solid #2180FF;
+     }
+     @include laptop {
+       justify-content: center;
+       flex-wrap: wrap;
+     }
+   }
 
   .contacts {
     display: flex;
