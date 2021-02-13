@@ -108,7 +108,8 @@ body {
   top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 99999; }
   .skladLinksBlock > a {
     display: flex;
     flex-direction: row-reverse;
@@ -504,5 +505,81 @@ body {
     display: none; }
 
 /* /PRICE */
+/* PRODUCT */
+.product .calcPages__title > p {
+  margin-top: 20px; }
+.product .table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #1FF2FF;
+  border-radius: 7px;
+  width: 600px;
+  max-height: 700px;
+  overflow-y: scroll;
+  /* width */
+  /* Handle */
+  /* Handle on hover */ }
+  .product .table::-webkit-scrollbar {
+    width: 5px; }
+  .product .table::-webkit-scrollbar-thumb {
+    background: #1F53FF;
+    border-radius: 10px; }
+  .product .table::-webkit-scrollbar-thumb:hover {
+    background: #fff; }
+  .product .table .th > * {
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  .product .table .tr {
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid #1FF2FF; }
+    .product .table .tr:first-child {
+      border: 0; }
+    .product .table .tr > * {
+      overflow: hidden;
+      flex-grow: 1;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      border-right: 1px solid #1FF2FF;
+      display: flex; }
+      .product .table .tr > *.table__price {
+        padding: 0; }
+      .product .table .tr > *.table__filters {
+        padding: 10px 15px; }
+      .product .table .tr > *:last-child {
+        border: 0; }
+  .product .table__filters {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center; }
+    .product .table__filters > * {
+      margin-right: 10px;
+      cursor: pointer;
+      box-sizing: border-box;
+      padding: 2px; }
+      .product .table__filters > *.selected {
+        border: 1px solid #1FF2FF;
+        border-radius: 3px; }
+  .product .table__name {
+    width: 150px; }
+  .product .table__length {
+    width: 80px; }
+  .product .table__price {
+    width: 100px;
+    display: flex;
+    flex-direction: row; }
+    .product .table__price > div {
+      flex-grow: 1;
+      height: 100%;
+      padding: 5px 10px;
+      box-sizing: border-box; }
+      .product .table__price > div:nth-child(2) {
+        border-left: 1px solid #1FF2FF; }
+  .product .table__provider {
+    width: 150px; }
+
+/* /PRODUCT*/
 
 /*# sourceMappingURL=additional.css.map */
