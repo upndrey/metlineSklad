@@ -581,5 +581,380 @@ body {
     width: 150px; }
 
 /* /PRODUCT*/
+/* GLOBAL */
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  min-width: 320px; }
+
+.notImplemented {
+  display: none; }
+
+.hidden {
+  visibility: hidden; }
+
+.displaynone {
+  display: none; }
+
+.container {
+  max-width: 1020px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  font-weight: 300; }
+  @media screen and (max-width: 1220px) {
+    .container {
+      max-width: 1024px; } }
+  @media screen and (max-width: 1024px) {
+    .container {
+      max-width: 768px; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 480px; } }
+  @media screen and (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box; } }
+
+.displayflex {
+  display: flex; }
+
+.titleBlock {
+  align-self: center;
+  width: 1120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300; }
+  .titleBlock h2 {
+    color: #E9F2FF;
+    position: relative;
+    font-size: 36px; }
+    .titleBlock h2:before {
+      content: '';
+      position: relative;
+      display: block;
+      background-image: url("../images/horizontal_line.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 200px;
+      height: 2px;
+      top: 45px; }
+    @media screen and (max-width: 1024px) {
+      .titleBlock h2 {
+        margin-bottom: 30px; } }
+  .titleBlock p {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+    width: 638px; }
+    .titleBlock p:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url("../images/small_vertical_line.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 2px;
+      height: 100px;
+      left: -10px; }
+    @media screen and (max-width: 768px) {
+      .titleBlock p {
+        max-width: 100%; } }
+  @media screen and (max-width: 1220px) {
+    .titleBlock {
+      max-width: 1024px; } }
+  @media screen and (max-width: 1024px) {
+    .titleBlock {
+      max-width: 768px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
+  @media screen and (max-width: 768px) {
+    .titleBlock {
+      max-width: 480px; } }
+  @media screen and (max-width: 480px) {
+    .titleBlock {
+      max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box; } }
+
+/* /GLOBAL */
+/* Metall */
+/* CATALOG */
+.catalog {
+  max-width: 1120px;
+  height: 100vh;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: space-between; }
+  .catalog__wrapper {
+    overflow: hidden;
+    position: relative;
+    background: #161C28; }
+    .catalog__wrapper:before {
+      content: '';
+      position: absolute;
+      width: 283px;
+      height: 1074px;
+      right: -300px;
+      top: 0;
+      background: #121E79;
+      opacity: 0.6;
+      filter: blur(250px); }
+      @media screen and (max-width: 480px) {
+        .catalog__wrapper:before {
+          height: auto; } }
+  .catalog h1 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px; }
+  .catalog .titleBlock {
+    margin-bottom: 100px; }
+  .catalog__links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #006DFF; }
+    .catalog__links > * {
+      margin: 0 30px;
+      position: relative;
+      display: flex;
+      align-items: center; }
+      .catalog__links > *:hover {
+        text-decoration: underline; }
+      @media screen and (max-width: 768px) {
+        .catalog__links > * {
+          margin-bottom: 10px; } }
+    .catalog__links .request:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url("../images/catalog/icons/request.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      left: -30px; }
+    .catalog__links .search:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url("../images/catalog/icons/search.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+      left: -30px; }
+    .catalog__links .tech:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url("../images/catalog/icons/tech.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 17px;
+      height: 16px;
+      left: -30px; }
+    .catalog__links .delivery:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url("../images/catalog/icons/delivery.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 21px;
+      height: 16px;
+      left: -30px; }
+    .catalog__links .contacts:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url("../images/catalog/icons/contacts.png");
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 13px;
+      height: 19px;
+      left: -25px; }
+    @media screen and (max-width: 768px) {
+      .catalog__links {
+        flex-wrap: wrap; } }
+  @media screen and (max-width: 1024px) {
+    .catalog {
+      height: auto; } }
+
+.cvetnyeMetally .section {
+  width: 900px;
+  height: 400px !important;
+  margin: auto; }
+  @media screen and (max-width: 1024px) {
+    .cvetnyeMetally .section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 600px;
+      height: auto !important;
+      margin: auto; } }
+  @media screen and (max-width: 480px) {
+    .cvetnyeMetally .section {
+      width: 100%; } }
+.cvetnyeMetally .fp-tableCell {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 900px;
+  height: 400px !important;
+  margin: auto; }
+@media screen and (max-width: 1024px) {
+  .cvetnyeMetally .slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 600px;
+    height: auto;
+    margin: auto; } }
+@media screen and (max-width: 480px) {
+  .cvetnyeMetally .slide {
+    width: 100%; } }
+.cvetnyeMetally a {
+  border: 1px solid #198AF2;
+  box-sizing: border-box;
+  border-radius: 25px;
+  margin: 25px 50px; }
+  .cvetnyeMetally a p {
+    text-align: center;
+    position: relative;
+    bottom: 25px; }
+.cvetnyeMetally .fp-controlArrow.fp-next,
+.cvetnyeMetally .fp-controlArrow.fp-prev {
+  border: none;
+  width: 62px;
+  height: 62px;
+  bottom: 50px !important; }
+.cvetnyeMetally .fp-controlArrow.fp-prev {
+  background: url("../images/arr_left.png");
+  left: -75px; }
+.cvetnyeMetally .fp-controlArrow.fp-next {
+  background: url("../images/arr_right.png");
+  right: -75px; }
+.cvetnyeMetally #aluminiym {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/aluminiym.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #bronze {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/bronze.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #wolfram {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/wolfram.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #latyn {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/latyn.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #magniy {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/magniy.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #med {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/med.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #nikel {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/nikel.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #nihrom {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/nihrom.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #olovo {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/olovo.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #svinec {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/svinec.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #titan {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/titan.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #cink {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/cink.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+.cvetnyeMetally #cirkoniy {
+  position: relative;
+  display: block;
+  background-image: url("../images/catalog/cvetniye/cirkoniy.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 200px;
+  height: 135px; }
+
+/* /Metall */
 
 /*# sourceMappingURL=additional.css.map */
