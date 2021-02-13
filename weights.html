@@ -9,29 +9,76 @@
 
     <meta name="HandheldFriendly" content="true"/>
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/calc.css">
+    <link rel="stylesheet" href="./styles/additional.css">
     <title>Метлайн</title>
 </head>
 <body>
-<div class="calcPages__wrapper">
+<div class="additional weights__wrapper">
+    <div class="header__logo"><span>складской комплекс</span></div>
     <div class="skladLinksBlock">
-        <a href="sizes.html" class="sizesLink active">Размер</a>
-        <a href="weights.html" class="weightsLink">Вес</a>
+        <a href="sizes.html" class="sizesLink">Размер</a>
+        <a href="weights.html" class="weightsLink active">Вес</a>
         <a href="cart.html" class="cartLink">Корзина</a>
         <a href="calculator.html" class="calculatorLink">Калькулятор</a>
         <a href="gost.html" class="gostLink">ГОСТы и ТУ</a>
     </div>
-    <div class="calcPages container">
-        <h1>Размер</h1>
-        <nav class="calcPages__menu menu">
-            <a href="index.html#firstScreen" class="firstScreenLink">Главная</a>
-            <a href="index.html#catalog" class="catalogLink">Каталог</a>
-            <a href="index.html#services" class="servicesLink">Услуги</a>
-            <a href="index.html#callback" class="callbackLink">Контакты</a>
-            <a href="vacancy.html">Вакансии</a>
-            <a href="index.html#">Личный кабинет</a>
-        </nav>
+    <div class="weights container">
+        <div class="calcPages__title">
+            <h1>Вес металлопроката</h1>
+            <nav class="calcPages__menu">
+                <a href="index.html#firstScreen" class="firstScreenLink">Главная</a>
+                <a href="index.html#catalog" class="catalogLink">Каталог</a>
+                <a href="index.html#services" class="servicesLink">Услуги</a>
+                <a href="index.html#callback" class="callbackLink">Контакты</a>
+                <a href="vacancy.html">Вакансии</a>
+                <a href="index.html#">Личный кабинет</a>
+            </nav>
+        </div>
+        <div class="selectBlock">
+            <select name="naimenovanie" id="naimenovanieSelect">
+                <option value="Lorem ipsum" selected disabled hidden>(Выберите наименование)</option>
+                <option value="Lorem ipsum">Lorem ipsum1</option>
+                <option value="Lorem ipsum">Lorem ipsum2</option>
+                <option value="Lorem ipsum">Lorem ipsum3</option>
+                <option value="Lorem ipsum">Lorem ipsum4</option>
+            </select>
+        </div>
+        <div class="weights__block">
+            <div class="weights__help help">
+                <div class="help__title">Вес <span id="help_title">Армотура А1</span></div>
+                <div class="help__body">
+                    Вводите требуемые значения, остальные поля пересчитаются автоматически
+                </div>
+            </div>
+            <div class="table">
+                <div class="tr">
+                    <div class="table__type">36</div>
+                    <div><input type="number" value="1" name="weight" class="weightInput"><span>Тонны</span></div>
+                    <div><input type="number" value="4505.499" name="meters" class="metersInput"><span>Метры</span></div>
+                    <div><input type="number" value="1234.222" name="length" class="lengthInput"><span>Длина 1 шт.</span></div>
+                    <div><input type="number" value="36" name="count" class="countInput"><span>Кол-во шт.</span></div>
+                    <div class="table__price">Цены</div>
+                </div>
+                <div class="tr">
+                    <div class="table__type">24</div>
+                    <div><input type="number" value="1" name="weight" class="weightInput"><span>Тонны</span></div>
+                    <div><input type="number" value="4505.499" name="meters" class="metersInput"><span>Метры</span></div>
+                    <div><input type="number" value="1234.222" name="length" class="lengthInput"><span>Длина 1 шт.</span></div>
+                    <div><input type="number" value="36" name="count" class="countInput"><span>Кол-во шт.</span></div>
+                    <div class="table__price">Цены</div>
+                </div>
+                <div class="tr">
+                    <div class="table__type">18</div>
+                    <div><input type="number" value="1" name="weight" class="weightInput"><span>Тонны</span></div>
+                    <div><input type="number" value="4505.499" name="meters" class="metersInput"><span>Метры</span></div>
+                    <div><input type="number" value="1234.222" name="length" class="lengthInput"><span>Длина 1 шт.</span></div>
+                    <div><input type="number" value="36" name="count" class="countInput"><span>Кол-во шт.</span></div>
+                    <div class="table__price">Цены</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<script src="./js/weights.js"></script>
 </body>
 </html>

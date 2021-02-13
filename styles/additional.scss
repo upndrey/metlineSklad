@@ -277,7 +277,7 @@ body {
       }
     }
   }
-  .sizes__block {
+  &__block {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -308,3 +308,124 @@ body {
 }
 
 /* /SIZES */
+/* WEIGHTS */
+
+.weights {
+  max-width: 1120px;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  &__wrapper {
+    position: relative;
+    background: #161C28;
+    height: 100vh;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 529.38px;
+      height: 1006.9px;
+      left: -76px;
+      top: 555.01px;
+      opacity: .7;
+
+      background: radial-gradient(51.59% 51.59% at 50.12% 48.41%, #1A00B9 0%, rgba(28, 6, 169, 0) 100%);
+      transform: rotate(-35.18deg);
+      @include phones {
+        height: auto;
+      }
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .help {
+      border: 1px solid #1F53FF;
+      max-width: 600px;
+      border-radius: 7px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      margin: auto;
+      margin-bottom: 20px;
+
+      &__title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 26px;
+      }
+      &__body {
+        font-size: 24px;
+      }
+    }
+
+    .table {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #1F53FF;
+      border-radius: 7px;
+      width: 600px;
+      .tr {
+        display: flex;
+        align-items: stretch;
+        border-top: 1px solid #1F53FF;
+        &:first-child {
+          border: 0;
+        }
+        &>* {
+          flex-grow: 1;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          border-right: 1px solid #1F53FF;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &>input {
+            background: transparent;
+            border: 0;
+            display: block;
+            color: #fff;
+            width: 125px;
+            font-size: 23px;
+            text-align: center;
+            position: relative;
+            left: 10px;
+            &[name=count],
+            &[name=weight]{
+              width: 50px;
+            }
+          }
+          &>span {
+            &:last-child {
+              text-align: center;
+              font-size: 10px;
+            }
+          }
+          &:last-child {
+            border: 0;
+          }
+        }
+      }
+      &__type {
+        width: 50px;
+        font-size: 23px;
+      }
+      &__price {
+        border-right: 1px solid transparent;
+        cursor: pointer;
+        font-size: 23px;
+      }
+    }
+  }
+
+  .selectBlock {
+    margin-bottom: 0;
+  }
+}
+
+/* /WEIGHTS */
