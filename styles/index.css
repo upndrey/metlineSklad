@@ -3135,7 +3135,9 @@ body {
           background: rgba(191, 65, 69, 0.74);
           border: 2px solid transparent; }
   .cartPage__body.notEmptyCart > table {
-    width: 100%; }
+    width: 100%;
+    display: inline-block;
+    overflow-x: scroll; }
     .cartPage__body.notEmptyCart > table .prodHead > tr {
       display: flex;
       justify-content: space-between; }

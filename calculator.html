@@ -13,24 +13,67 @@
     <title>Метлайн</title>
 </head>
 <body>
-<div class="calcPages__wrapper">
+<div class="additional calculator__wrapper">
+    <div class="header__logo"><span>складской комплекс</span></div>
     <div class="skladLinksBlock">
-        <a href="sizes.html" class="sizesLink active">Размер</a>
+        <a href="sizes.html" class="sizesLink">Размер</a>
         <a href="weights.html" class="weightsLink">Вес</a>
         <a href="cart.html" class="cartLink">Корзина</a>
-        <a href="calculator.html" class="calculatorLink">Калькулятор</a>
-        <a href="gost.html" class="gostLink">ГОСТы и ТУ</a>
+        <a href="calculator.html" class="calculatorLink active">Калькулятор</a>
+        <a href="gosts.html" class="gostLink">ГОСТы и ТУ</a>
     </div>
-    <div class="calcPages container">
-        <h1>Размер</h1>
-        <nav class="calcPages__menu menu">
-            <a href="index.html#firstScreen" class="firstScreenLink">Главная</a>
-            <a href="index.html#catalog" class="catalogLink">Каталог</a>
-            <a href="index.html#services" class="servicesLink">Услуги</a>
-            <a href="index.html#callback" class="callbackLink">Контакты</a>
-            <a href="vacancy.html">Вакансии</a>
-            <a href="index.html#">Личный кабинет</a>
-        </nav>
+    <div class="calculator container">
+        <div class="calcPages__title">
+            <h1>Калькулятор металлопроката</h1>
+            <nav class="calcPages__menu">
+                <a href="index.html#firstScreen" class="firstScreenLink">Главная</a>
+                <a href="index.html#catalog" class="catalogLink">Каталог</a>
+                <a href="index.html#services" class="servicesLink">Услуги</a>
+                <a href="index.html#callback" class="callbackLink">Контакты</a>
+                <a href="vacancy.html">Вакансии</a>
+                <a href="index.html#">Личный кабинет</a>
+            </nav>
+        </div>
+        <div class="calculator__inputs inputs">
+            <div class="inputs__block">
+                <select name="naimenovanie" id="">
+                    <option value="Lorem ipsum" selected disabled hidden>Арматура А1</option>
+                    <option value="Lorem ipsum">Lorem ipsum1</option>
+                    <option value="Lorem ipsum">Lorem ipsum2</option>
+                    <option value="Lorem ipsum">Lorem ipsum3</option>
+                    <option value="Lorem ipsum">Lorem ipsum4</option>
+                </select>
+                <div>
+                    <div><input type="number" value="1234.222" name="weight" class="lengthInput"><span>Тонны</span></div>
+                    <div><input type="number" value="36" name="meter" class="countInput"><span>Метры</span></div>
+                </div>
+            </div>
+            <div class="inputs__image"></div>
+            <div class="inputs__block">
+                <select name="naimenovanie">
+                    <option value="Lorem ipsum" selected disabled hidden>36</option>
+                    <option value="Lorem ipsum">32</option>
+                    <option value="Lorem ipsum">28</option>
+                    <option value="Lorem ipsum">24</option>
+                    <option value="Lorem ipsum">20</option>
+                </select>
+                <div>
+                    <div><input type="number" value="1234.222" name="weight" class="lengthInput"><span>Длина 1 шт.</span></div>
+                    <div><input type="number" value="36" name="meter" class="countInput"><span>Кол-во шт.</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="calculator__block">
+            <p class="title">Арматура А1-36</p>
+            <div class="prices">
+                <p>От
+                    <span>4567890 руб./т</span>
+                    <span>44700 – 78000 руб./т</span>
+                </p>
+                <a href="price.html">Посмотреть цены поставщиков</a>
+            </div>
+            <p><a href="gosts.html">ГОСТы и ТУ на арматуру А1</a></p>
+        </div>
     </div>
 </div>
 </body>

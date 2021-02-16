@@ -141,13 +141,10 @@ body {
   @include laptop {
     width: 100%;
     right: 0;
-    top: 250px;
+    top: 175px;
+    background: #161C28;
+    z-index: 999;
   }
-
-  @include phones {
-    display: none;
-  }
-
   .sizesLink {
     &:before {
       @include icon("../images/sklad/icons/sizes.png", 22px, 22px, true);
@@ -196,6 +193,14 @@ body {
     top: 126px;
     color: #D6D6D6;
   }
+
+  @include laptop {
+    position: relative;
+    margin: 25px auto 50px auto;
+    left: 0;
+    top: 0;
+  }
+
   @include tablets {
     margin-bottom: 20px;
   }
@@ -224,6 +229,14 @@ body {
       &:hover{
         border-bottom: 2px solid #006DFF;
       }
+      @include phones {
+        margin: 0 5px;
+      }
+    }
+    @include phones {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
@@ -234,6 +247,7 @@ body {
     cursor: pointer;
     font-family: "Open Sans", serif;
     width: 600px;
+    max-width: 100%;
     margin: auto;
     display: block;
     font-size: 24px;
@@ -246,6 +260,9 @@ body {
     color: #787878;
     &>option {
     }
+    @include phones {
+      width: 100%;
+    }
   }
 }
 /* /CALCPAGES */
@@ -257,6 +274,10 @@ body {
   font-size: 16px;
   flex-direction: column;
   justify-content: space-between;
+  @include laptop {
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+  }
   &__wrapper {
     position: relative;
     background: #161C28;
@@ -310,6 +331,234 @@ body {
 }
 
 /* /SIZES */
+/* CALCULATOR */
+
+.calculator {
+  max-width: 1120px;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  @include laptop {
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+  }
+  &__wrapper {
+    position: relative;
+    background: #161C28;
+    height: 100vh;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 529.38px;
+      height: 1006.9px;
+      left: -76px;
+      top: 555.01px;
+      opacity: .7;
+
+      background: radial-gradient(51.59% 51.59% at 50.12% 48.41%, #1A00B9 0%, rgba(28, 6, 169, 0) 100%);
+      transform: rotate(-35.18deg);
+      @include phones {
+        height: auto;
+      }
+    }
+  }
+
+  .inputs {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    @include laptop {
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    select {
+      cursor: pointer;
+      font-family: "Open Sans", serif;
+      width: 300px;
+      margin: auto;
+      display: block;
+      font-size: 24px;
+      background: transparent;
+      border: 1px solid #BABABA;
+      box-sizing: border-box;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border-radius: 7px;
+      color: #787878;
+      @include phones {
+        width: 100%;
+      }
+    }
+
+    &__image {
+      @include icon("../images/additional/calculator/calculator.png", 89px, 89px, false);
+      align-self: center;
+      margin: 0 50px;
+      @include tablets {
+        margin: 25px 0;
+      }
+    }
+    &__block {
+      width: 300px;
+      @include phones {
+        width: 100%;
+      }
+      &>div {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #BABABA;
+        border-radius: 7px;
+        @include phones {
+          width: 100%;
+        }
+        &>div {
+          flex-grow: 1;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          border-right: 1px solid #BABABA;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &>input {
+            background: transparent;
+            border: 0;
+            display: block;
+            width: 125px;
+            color: #fff;
+            font-size: 23px;
+            text-align: center;
+            position: relative;
+            left: 10px;
+          }
+          &>span {
+            &:last-child {
+              text-align: center;
+              font-size: 10px;
+            }
+          }
+          &:last-child {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+  &__block {
+    width: 364px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #BABABA;
+    border-right: 1px solid #BABABA;
+    border-radius: 4px;
+
+    @include phones {
+      width: 100%;
+    }
+    .title {
+      font-size: 28px;
+    }
+    &>p {
+      font-size: 22px;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #BABABA;
+      border-bottom: 1px solid #BABABA;
+      border-radius: 4px;
+    }
+
+    .prices {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin: 25px 0;
+      p {
+        text-align: center;
+        display: block;
+        margin: auto;
+        span {
+          display: inline-block;
+          font-size: 26px;
+          margin: 5px;
+        }
+      }
+      a {
+        color: #1F53FF;
+      }
+    }
+  }
+}
+
+/* /CALCULATOR */
+/* WEIGHTS */
+
+.gosts {
+  max-width: 1120px;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  &__wrapper {
+    position: relative;
+    background: #161C28;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 529.38px;
+      height: 1006.9px;
+      left: -76px;
+      top: 555.01px;
+      opacity: .7;
+
+      background: radial-gradient(51.59% 51.59% at 50.12% 48.41%, #1A00B9 0%, rgba(28, 6, 169, 0) 100%);
+      transform: rotate(-35.18deg);
+      @include phones {
+        height: auto;
+      }
+    }
+  }
+
+
+  #content {
+    .gosts-list {
+      &>li{
+        padding: 5px;
+        &>a {
+          font-size: 24px;
+          margin-bottom: 5px;
+        }
+        margin-bottom: 15px;
+        @include phones {
+          padding: 0;
+        }
+      }
+    }
+    #gosts-second-td {
+      display: none;
+    }
+  }
+}
+
+/* /WEIGHTS */
 /* WEIGHTS */
 
 .weights {
@@ -318,6 +567,10 @@ body {
   font-size: 16px;
   flex-direction: column;
   justify-content: space-between;
+  @include laptop {
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+  }
   &__wrapper {
     position: relative;
     background: #161C28;
@@ -371,6 +624,9 @@ body {
       border: 1px solid #1F53FF;
       border-radius: 7px;
       width: 600px;
+      max-width: 100%;
+      overflow-x: scroll;
+      margin-bottom: 25px;
       .tr {
         display: flex;
         align-items: stretch;
@@ -439,6 +695,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @include laptop {
+    max-height: calc(100vh - 200px);
+    overflow-y: scroll;
+  }
   &__wrapper {
     position: relative;
     background: #161C28;
@@ -471,6 +731,9 @@ body {
     &>p {
       margin-bottom: 5px;
     }
+    @include phones {
+      text-align: center;
+    }
   }
 
   &__select {
@@ -501,6 +764,19 @@ body {
   height: 100vh;
   background: #000;
   z-index: 999;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  &__close {
+    color: red;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 28px;
+    font-weight: 600;
+  }
 
   .filters {
     margin-bottom: 50px;
@@ -600,6 +876,19 @@ body {
 /* /PRICE */
 /* PRODUCT */
 .product {
+  max-height: calc(100vh);
+  overflow-y: scroll;
+  max-width: 100%;
+  @include laptop {
+    max-height: calc(100vh - 225px);
+    overflow-y: scroll;
+  }
+  .calcPages__title {
+    @include phones {
+      margin-bottom: 25px;
+    }
+  }
+
   .calcPages__title>p {
     margin-top: 20px;
   }
@@ -610,22 +899,13 @@ body {
     border: 1px solid #1FF2FF;
     border-radius: 7px;
     width: 600px;
-    max-height: 700px;
-    overflow-y: scroll;
-    /* width */
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      background: #1F53FF;
-      border-radius: 10px;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-      background: #fff;
+    height: auto;
+    margin-bottom: 25px;
+    &__wrapper {
+      display: block;
+      max-width: 100%;
+      height: max-content;
+      overflow-x: scroll;
     }
     .th {
       &>*{
@@ -704,124 +984,7 @@ body {
   }
 }
 /* /PRODUCT*/
-@import "mixins";
 
-/* GLOBAL */
-body {
-  overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  min-width: 320px;
-}
-
-.notImplemented {
-  display: none;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.displaynone {
-  display: none;
-}
-
-
-.container {
-  max-width: $desktopWidth - 100px;
-  margin: auto;
-  display: flex;
-  position: relative;
-  font-weight: 300;
-
-  @include desktop{
-    max-width: $laptopWidthBound;
-  }
-
-  @include laptop{
-    max-width: $tabletsWidthBound;
-  }
-
-  @include tablets{
-    max-width: $phonesWidthBound;
-  }
-
-  @include phones{
-    max-width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-}
-
-.displayflex {
-  display: flex;
-}
-
-.titleBlock {
-  align-self: center;
-  width: $desktopWidth;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 300;
-  h2 {
-    color: #E9F2FF;
-    position: relative;
-    font-size: 36px;
-    &:before {
-      @include icon("../images/horizontal_line.png", 200px, 2px);
-      top: 45px;
-    }
-
-    @include laptop{
-      margin-bottom: 30px;
-    }
-  }
-
-  p {
-    position: relative;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 21px;
-
-    width: 638px;
-    &:before {
-      @include icon("../images/small_vertical_line.png", 2px, 100px, true, absolute);
-      left: -10px;
-    }
-    @include tablets{
-      max-width: 100%;
-    }
-  }
-
-  @include desktop{
-    max-width: $laptopWidthBound;
-  }
-
-  @include laptop{
-    max-width: $tabletsWidthBound;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @include tablets{
-    max-width: $phonesWidthBound;
-  }
-
-  @include phones{
-    max-width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-}
-
-
-
-
-/* /GLOBAL */
 /* Metall */
 
 /* CATALOG */
