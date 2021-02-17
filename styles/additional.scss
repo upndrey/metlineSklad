@@ -304,11 +304,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include laptop {
+      flex-direction: column;
+    }
+    &>img {
+      max-width: 100%;
+    }
     table {
       display: block;
       border: 1px solid #1F53FF;
-      max-width: 600px;
+      width: 600px;
+      max-width: 100%;
       border-radius: 7px;
+      @include laptop {
+        margin: 50px 0;
+      }
       tr {
         border-top: 1px solid #1F53FF;
         &:first-child {
@@ -940,6 +950,9 @@ body {
           border: 0;
         }
       }
+    }
+    .displaynone {
+      display: none;
     }
 
     &__filters {

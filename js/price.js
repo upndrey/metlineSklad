@@ -46,4 +46,31 @@ document.addEventListener('DOMContentLoaded', function(){
         closePriceDom.addEventListener("click", function () {
             pricemenuDom.classList.toggle("displaynone");
         });
+    let tableFilterDom = document.querySelectorAll(".table__filters>div");
+    if(tableFilterDom) {
+        let tableProdDom = document.querySelectorAll(".table>.prod");
+        tableFilterDom.forEach(function (elem) {
+            elem.addEventListener("click", function () {
+                tableFilterDom.forEach(function (elem2) {
+                    elem2.classList.remove("selected");
+                });
+                let filterName = elem.classList[0];
+                elem.classList.add("selected");
+                if(filterName !== "all") {
+                    tableProdDom.forEach(function (elem2) {
+                        elem2.classList.add("displaynone");
+                    });
+                    let tableFilteredDom = document.querySelectorAll(".table>." + filterName);
+                    tableFilteredDom.forEach(function (elem2) {
+                        elem2.classList.remove("displaynone");
+                    });
+                }
+                else {
+                    tableProdDom.forEach(function (elem2) {
+                        elem2.classList.remove("displaynone");
+                    });
+                }
+            });
+        });
+    }
 });
