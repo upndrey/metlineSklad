@@ -1619,5 +1619,39 @@ document.addEventListener('DOMContentLoaded', function(){
         $(".hiddenBlocks__bg").addClass("displaynone");
     });
 
+    let loginLink = document.querySelector(".loginLink");
+    if(loginLink)
+        loginLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            let loginPopupDom = document.querySelector(".loginPopup");
+            loginPopupDom.classList.remove("displaynone");
+            loginPopupDom.classList.add("displayflex");
+        });
 
+    let loginClose = document.querySelector(".loginPopup__close");
+    if(loginClose) {
+        loginClose.addEventListener("click", function (){
+            let loginPopupDom = document.querySelector(".loginPopup");
+            loginPopupDom.classList.add("displaynone");
+            loginPopupDom.classList.remove("displayflex");
+        });
+    }
+    let visitorLink = document.querySelector(".visitorLink");
+    let clientLink = document.querySelector(".clientLink");
+    if(visitorLink && clientLink) {
+        let visitor = document.querySelector(".loginPopup__visitor");
+        let client = document.querySelector(".loginPopup__client");
+        visitorLink.addEventListener("click", function (){
+            visitorLink.classList.add("active");
+            clientLink.classList.remove("active");
+            visitor.classList.remove("displaynone");
+            client.classList.add("displaynone");
+        });
+        clientLink.addEventListener("click", function (){
+            visitorLink.classList.remove("active");
+            clientLink.classList.add("active");
+            visitor.classList.add("displaynone");
+            client.classList.remove("displaynone");
+        });
+    }
 });

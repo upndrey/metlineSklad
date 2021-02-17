@@ -21,6 +21,28 @@
         <div id="searchBlock"></div>
     </div>
 </div>
+<div class="displayflex loginPopup">
+    <form action="#" method="post">
+        <div class="loginPopup__close">X</div>
+        <div class="loginPopup__links">
+            <a href="#" class="visitorLink active">Посетитель</a>
+            <a href="#" class="clientLink">Клиент</a>
+        </div>
+        <div class="loginPopup__block loginPopup__visitor">
+            <input type="email" name="visitor__email" placeholder="E-mail">
+            <input type="password" name="visitor__pass" placeholder="Пароль">
+            <input type="submit" name="visitor__submit" value="Отправить">
+            <a href="#">Зарегистрироваться</a>
+            <a href="#">Забыли пароль?</a>
+        </div>
+        <div class="loginPopup__block loginPopup__client displaynone">
+            <input type="email" name="client__email" placeholder="E-mail">
+            <input type="password" name="client__pass" placeholder="Пароль">
+            <input type="submit" name="client__submit" value="Отправить">
+            <a href="#">Забыли пароль?</a>
+        </div>
+    </form>
+</div>
 <ul id="menu">
     <li data-menuanchor="firstScreen" class="active"><a href="index.html#firstScreen"></a></li>
     <li data-menuanchor="catalog"><a href="index.html#catalog"></a></li>
@@ -37,7 +59,7 @@
                 <a href="index.html#services" class="servicesLink">Услуги</a>
                 <a href="index.html#callback" class="callbackLink">Контакты</a>
                 <a href="vacancy.html">Вакансии</a>
-                <a href="index.html#" class="notImplemented">Личный кабинет</a> <!-- Ещё не реализовано -->
+                <a href="index.html#" class="loginLink">Вход</a> <!-- Ещё не реализовано -->
             </nav>
             <div class="contacts">
                 <div class="search"></div>
@@ -522,7 +544,7 @@
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript" src="./js/jquery.fullpage.min.js"></script>
 <script type="text/javascript" src="./js/vendors/scrolloverflow.min.js"></script>
-<script type="text/javascript" src="./js/index.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
 <script type="text/javascript" src="./js/slick.min.js"></script>
 
 <script type="text/javascript">

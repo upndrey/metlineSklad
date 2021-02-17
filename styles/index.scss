@@ -4032,3 +4032,115 @@ body {
   }
 }
 /* /SEARCH */
+/* LOGIN */
+.loginPopup {
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  @include phones {
+    width: calc(100% - 10px);
+    padding: 5px;
+  }
+
+  .displaynone {
+    display: none !important;
+  }
+
+  .displayflex {
+    display: flex !important;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    max-width: 100%;
+    background: #14192c;
+    color: #fff;
+    position: relative;
+  }
+
+  &__close {
+    color: red;
+    font-size: 24px;
+    font-weight: 800;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  &__links {
+    width: 300px;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    display: flex;
+    font-weight: 300;
+    &>*  {
+      border: 1px solid #BABABA;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 10px 20px;
+      text-align: center;
+      width: 150px;
+      flex-grow: 1;
+      &:first-child {
+        border-right: 0;
+      }
+      &:last-child {
+        border-left: 0;
+      }
+
+      &.active {
+        border: 1px solid #1F53FF;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    &>* {
+      width: 300px;
+      margin-bottom: 15px;
+      font-weight: 300;
+    }
+
+    input[type=email],
+    input[type=password] {
+      border: 1px solid #BABABA;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 10px;
+      color: #fff;
+      background: transparent;
+      font-weight: 300;
+    }
+
+    input[type=submit] {
+      border: 1px solid #BABABA;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 10px;
+      color: #fff;
+      background: #1F53FF;
+      text-align: center;
+      margin-top: 5px;
+      font-weight: 300;
+    }
+
+    a {
+      text-align: center;
+      font-size: 18px;
+      &:last-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+/* /LOGIN */
