@@ -1,4 +1,4 @@
-<?php
+<!-- <?php 
 $myCurl = curl_init();
 curl_setopt_array($myCurl, array(
     CURLOPT_URL => 'http://23met.ru/calculator.php',
@@ -10,4 +10,7 @@ $response = curl_exec($myCurl);
 curl_close($myCurl);
 
 echo "Ответ на Ваш запрос: ".$response;
-?>
+?>-->
+
+<?php
+phpInfo();
