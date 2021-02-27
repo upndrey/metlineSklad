@@ -12,5 +12,5 @@ $response = curl_exec($myCurl);
 curl_close($myCurl);
 echo "Ответ на Ваш запрос: ".$response;
 */
-phpInfo();
+phpinfo();
 ?>
